@@ -1,0 +1,38 @@
+<<<<<<< HEAD
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        // 1st method
+         int lo = 0;
+         int hi = nums.size()-1;
+         while(lo <= hi){
+              int mid   = floor((lo+hi)/2);
+              if(nums[mid] ==  target) return mid;
+              if(nums[mid]  < target) lo =  mid+1;
+              else hi = mid-1;
+         }
+         return lo;
+        // 2nd method
+          // auto ind =  lower_bound(nums.begin(), nums.end(), target) -  nums.begin();
+          // return ind;
+    }
+=======
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        // 1st method
+         int lo = 0;
+         int hi = nums.size()-1;
+         while(lo <= hi){
+              int mid   = floor((lo+hi)/2);
+              if(nums[mid] ==  target) return mid;
+              if(nums[mid]  < target) lo =  mid+1;
+              else hi = mid-1;
+         }
+         return lo;
+        // 2nd method
+          // auto ind =  lower_bound(nums.begin(), nums.end(), target) -  nums.begin();
+          // return ind;
+    }
+>>>>>>> 22c3e9a24a132a9d52ee1e89615b606b0fdf72f6
+};
